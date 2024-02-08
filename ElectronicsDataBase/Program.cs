@@ -9,10 +9,49 @@ namespace ElectronicsDataBase._1
     // Main Class and Descriptions
     class Electronics
     {
+        // Fields
         string name = "EXPhone";
-        string BuyDate = "D.M.Y";
-        double Price = 00.00;
-        int WarrantyPeriodMonths = 000;
+        string date = "D.M.Y";
+        double price = 00.00;
+        int warranty = 000;
+
+        // Properties
+
+        // Constructors
+        // w/o
+        public Electronics() 
+        {
+        
+        }
+        // 1
+        public Electronics(string name) 
+        {
+            this.name = name;
+        }
+        // 2
+        public Electronics(string name, string date)
+        {
+            this.name = name;
+            this.date = date;
+        }
+        // 3
+        public Electronics(string name, string date, double price)
+        {
+            this.name = name;
+            this.date = date;
+            this.price = price;
+        }
+        // 4
+        public Electronics(string name, string date, double price, int warranty)
+        {
+            this.name = name;
+            this.date = date;
+            this.price = price;
+            this.warranty = warranty;
+        }
+
+        // Other methods
+
 
         // Need to add how the data will be input
     }
@@ -20,6 +59,15 @@ namespace ElectronicsDataBase._1
     // Sub Classes
     class Phone : Electronics
     {
+        string name;
+        string buyDate;
+        double price;
+        int warranty;
+
+        public Phone(string name) 
+        { 
+            this.name = name;
+        }  
         // Add type (android/ios/win), maker, memory 
     }
 
