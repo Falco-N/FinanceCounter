@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElectronicsDataBase._1
 {
@@ -10,21 +6,40 @@ namespace ElectronicsDataBase._1
     class Electronics
     {
         // Fields
-        string name = "EXPhone";
+        string name = "Device";
         string date = "D.M.Y";
-        double price = 00.00;
+        double price = 0.00d;
         int warranty = 000;
 
         // Properties
-
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Date
+        {
+            get { return date; }
+            set { date = value; }
+        }
+        public double Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+        public int Warranty
+        {
+            get { return warranty; }
+            set { warranty = value; }
+        }
         // Constructors
         // w/o
-        public Electronics() 
+        public Electronics()
         {
-        
+
         }
         // 1
-        public Electronics(string name) 
+        public Electronics(string name)
         {
             this.name = name;
         }
@@ -59,15 +74,6 @@ namespace ElectronicsDataBase._1
     // Sub Classes
     class Phone : Electronics
     {
-        string name;
-        string buyDate;
-        double price;
-        int warranty;
-
-        public Phone(string name) 
-        { 
-            this.name = name;
-        }  
         // Add type (android/ios/win), maker, memory 
     }
 
@@ -91,6 +97,9 @@ namespace ElectronicsDataBase._1
     {
         static void Main(string[] args)
         {
+            Electronics electronics1 = new Electronics();
+            Console.WriteLine(electronics1.Name);
+            Console.ReadLine();
         }
     }
 }
